@@ -1,0 +1,113 @@
+body {
+  background-color: #7ba05b; /* Verde pasto */
+  cursor: default;
+}
+
+/* Estilo para el tablero del juego */
+.juego-tablero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+  gap: 10px; /* Espacio entre los agujeros */
+  max-width: 600px; /* Ajustar el ancho máximo */
+  margin: auto;
+  cursor: none;
+}
+
+/* Estilo para cada agujero del juego */
+.mole-hole {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* Mantener una relación de aspecto cuadrada */
+  box-sizing: border-box;
+}
+
+/* Estilo para la imagen estática dentro de cada agujero */
+.static-image, .mole-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Estilo para la imagen estática */
+.static-image {
+  width: 100%; /* Tamaño de la imagen del agujero */
+  height: auto;
+}
+
+/* Estilo para la imagen del topo */
+.mole-image {
+  display: none; /* Oculta la imagen al inicio */
+  width: 100%; /* Ajusta el tamaño de la imagen del topo */
+  height: auto;
+}
+
+/* Estilo para la hitbox del topo */
+.mole-hitbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%; /* Tamaño mayor para la hitbox */
+  height: 50%; /* Tamaño mayor para la hitbox */
+  background-color: transparent; /* Hitbox transparente */
+}
+
+.cursor img {
+  position: absolute;
+  height: 125px;
+  z-index: 2;
+  transform: translate(-55px, -50px);
+  pointer-events: none;
+}
+
+/* Estilo para el marcador */
+.scoreboard {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la leyenda del juego */
+.juego-leyenda {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px; /* Ajustar el ancho máximo */
+}
+/* Estilo para el botón de iniciar juego */
+#start-button {
+  background-image: linear-gradient(144deg, #228B22, #01796F 50%, #00DDEB);
+  border: 0;
+  border-radius: 5px; /* Reducido el radio del borde */
+  box-shadow: rgba(151, 65, 252, 0.2) 0 10px 20px -5px; /* Reducida la sombra */
+  color: #FFFFFF;
+  font-size: 18px; /* Tamaño de fuente ligeramente reducido */
+  padding: 15px 10px; /* Ajuste del espaciado interno */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Cambio de color al pasar el cursor */
+#start-button:hover {
+  background-image: linear-gradient(144deg, #8C30CC, #4E37CC 50%, #00B7C8); /* Nuevo gradiente al pasar el cursor */
+}
+
+
+/* Estilo para el nombre del autor */
+.autor {
+  margin-top: 10px;
+}
+
+/* Estilo para el título del juego */
+.titulo-juego {
+  margin-top: 60px; /* Ajusta este valor para bajar el título */
+}
