@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  const topoimg = 'imgs/topo.png';  // Ruta a tu imagen PNG del topo
+  const topoimg = 'imgs/topo.png';  
   let score = 0;
   let fallos = 0;
   let activeMole;
