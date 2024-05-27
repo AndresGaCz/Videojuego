@@ -68,7 +68,7 @@ $(document).ready(function() {
   // Función para terminar el juego
   function endGame() {
     clearInterval(gameInterval);
-    alert('Game Over! You have missed 6 times.');
+    alert('Fin del juego! Has fallado 6 veces.');
   }
 
   creatablero();
